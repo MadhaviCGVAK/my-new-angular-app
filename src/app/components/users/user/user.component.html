@@ -1,0 +1,44 @@
+<!-- <h1>User Component</h1>
+<h2>All My Properties</h2>
+<p>Active Status:{{activeStatus}}</p>
+<p>Title:{{title}}</p>
+<p>laptop:{{localLap.modal}}</p> -->
+
+
+<!-- <div class="container">
+    <div class="row"> 
+        <div class="col-4">
+            <img src="https://m.media-amazon.com/images/I/61sYJlaT+OL._UY741_.jpg" width="100" height="100">
+ 
+        </div>
+        <div class="col-8">
+            {{user.name.firstname}}
+        </div>
+    </div>
+
+</div> -->
+
+<ul>
+    <li class="card card-body mb-2" [style]="{border:'3px solid red'}">
+    <div class="row">
+        <div class="col-md-4">
+            <img style="cursor:pointer;" (click)="setShowExtended()"  [src]='user.image' alt="" width="100" height="100">
+        </div>
+        <div class="col-md-8">
+            <h3 [style]="{'padding-top':user.price >10 ?'0' :'40px',
+            'color':user.price >10 ?'green' :'red', 'cursor':'pointer'
+        }" [ngStyle]="currentStyles">{{user.title | uppercase}}<span>
+                <small><button (click)="setShowExtended()" class="btn btn-sm btn-primary"><i [class]="!showextended ?'fa fa-plus':'fa fa-minus'"></i></button></small></span></h3>
+            <div *ngIf="showextended">
+            <p>
+                {{user.description}}
+            </p>
+            <p>
+                {{user.price | currency:"USD"}}
+            </p>
+            
+        </div>
+    </div>   
+</div>
+   </li>
+</ul>

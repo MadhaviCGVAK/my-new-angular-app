@@ -1,0 +1,15 @@
+nav{
+    background-color: blue;
+    padding: 30px;
+}
+
+.button{
+    background-color: bisque;
+    color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
